@@ -1,6 +1,6 @@
 # SecureVault — Cryptography as a Security Tool
 
-SecureVault is an offline-first academic security console demonstrating file protection, user authentication, integrity checking, signatures, secure random generation, and local audit trails. It uses React/Vite, Python/FastAPI, and local SQLite.
+SecureVault is an offline-first academic application demonstrating how operating systems use cryptography to protect files, authenticate accounts, detect tampering, and keep auditable records. A React/Vite security dashboard connects to a local Python/FastAPI service and SQLite; vault data, keys, and activity stay on the computer. The project includes AES-256-GCM file encryption, scrypt-based password verification and key derivation, SHA-256/SHA-512/educational MD5 hashing, RSA-PSS signatures, integrity checks, local backup and restore, and algorithm lessons. Windows launch scripts set up and start a demo without Docker, cloud services, or API keys; internet access is needed only to install dependencies the first time.
 
 > For classroom demonstration and learning. MD5 and DES are included only to explain legacy cryptography. The local session token and one-pass file overwrite illustrate concepts and are not a hardened production service.
 
@@ -75,6 +75,6 @@ Cloud backup, biometric authentication, OTP, role-based access, hardened multi-u
 
 ## Author
 
-**Student:** Add your name and roll number before submission.  
+**Author:** HEMIN VORA  
 **Course:** Operating Systems — Third Year  
 **Project:** SecureVault — Cryptography as a Security Tool
