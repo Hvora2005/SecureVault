@@ -1,0 +1,7 @@
+SECUREVAULT DEMO — INCIDENT RESPONSE CHECKLIST
+
+1. Preserve the affected evidence and record its source.
+2. Calculate a SHA-256 digest before analysis.
+3. Restrict access to authorized responders.
+4. Keep an audit trail of every operation.
+5. Compare the final digest with the original to check integrity.

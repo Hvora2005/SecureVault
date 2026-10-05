@@ -1,0 +1,5 @@
+SECUREVAULT DEMO — LEAST PRIVILEGE ACCESS POLICY
+
+Grant each account only the file access required for its task.
+Review permissions regularly and remove access when it is no longer needed.
+Keep sensitive records encrypted while stored on the device.
