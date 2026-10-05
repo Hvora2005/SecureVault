@@ -11,7 +11,7 @@ if not exist "backend\.venv\installed.ok" (
  echo ready>"backend\.venv\installed.ok"
 )
 if not exist "frontend\node_modules" (pushd frontend& call npm install& if errorlevel 1 (popd& echo Frontend dependency setup failed.& pause& exit /b 1)& popd)
-start "SecureVault backend" /min "%ComSpec%" /d /c "pushd ""%~dp0backend"" && ""%~dp0backend\.venv\Scripts\python.exe"" -m uvicorn main:app --host 127.0.0.1 --port 8000"
+start "SecureVault backend" /min "%~dp0start_backend.bat"
 echo Starting SecureVault backend...
 set /a attempts=0
 :wait_backend
@@ -23,7 +23,7 @@ timeout /t 1 /nobreak >nul
 goto wait_backend
 :backend_ready
 echo Backend ready. Starting frontend...
-start "SecureVault frontend" /min "%ComSpec%" /d /c "pushd ""%~dp0frontend"" && npm run dev -- --host 127.0.0.1"
+start "SecureVault frontend" /min "%~dp0start_frontend.bat"
 timeout /t 3 /nobreak >nul
 start "" http://127.0.0.1:5173
 echo SecureVault is running. Keep both console windows open while presenting.
